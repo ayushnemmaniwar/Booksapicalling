@@ -34,11 +34,13 @@ export default function App() {
         <button className="btn-danger">submit</button>
       </form>
       {items.map((item) => (
-        <img
-          key={item.id}
-          src={item.volumeInfo.imageLinks.thumbnail}
-          alt="image"
-        />
+        <a target="_blank" href={item.volumeInfo.previewLink}>
+          <img
+            key={item.id}
+            src={item.volumeInfo.imageLinks.thumbnail}
+            alt="image"
+          />
+        </a>
       ))}
     </div>
   );
